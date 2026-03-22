@@ -1,0 +1,192 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PawHelp BD | Feed a Stray, Save a Life</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }body {
+        background: linear-gradient(135deg, #fdfbfb, #ebedee);
+        color: #333;
+    }
+
+    header {
+        background: #111827;
+        color: white;
+        padding: 20px 10%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    header h1 {
+        font-size: 24px;
+        font-weight: 700;
+    }
+
+    nav a {
+        color: white;
+        margin-left: 20px;
+        text-decoration: none;
+        font-weight: 500;
+        transition: 0.3s;
+    }
+
+    nav a:hover {
+        color: #22c55e;
+    }
+
+    .hero {
+        padding: 80px 10%;
+        text-align: center;
+    }
+
+    .hero h2 {
+        font-size: 42px;
+        margin-bottom: 20px;
+        color: #111827;
+    }
+
+    .hero p {
+        font-size: 18px;
+        margin-bottom: 30px;
+        color: #555;
+    }
+
+    .btn {
+        padding: 12px 25px;
+        border: none;
+        border-radius: 30px;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: 600;
+        margin: 10px;
+        transition: 0.3s;
+    }
+
+    .btn-primary {
+        background: #22c55e;
+        color: white;
+    }
+
+    .btn-primary:hover {
+        background: #16a34a;
+    }
+
+    .btn-secondary {
+        background: #111827;
+        color: white;
+    }
+
+    .btn-secondary:hover {
+        background: #374151;
+    }
+
+    .section {
+        padding: 60px 10%;
+        text-align: center;
+    }
+
+    .card-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        margin-top: 30px;
+    }
+
+    .card {
+        background: white;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    }
+
+    .card h3 {
+        margin-bottom: 15px;
+        color: #22c55e;
+    }
+
+    footer {
+        background: #111827;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        margin-top: 40px;
+    }
+
+    .stats-box {
+        margin-top: 20px;
+        display: none;
+        padding: 20px;
+        background: #f3f4f6;
+        border-radius: 10px;
+    }
+</style>
+
+</head>
+<body><header>
+    <h1>PawHelp BD</h1>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#mission">Mission</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header><section class="hero">
+    <h2>A Small Act Can Change a Life 🐾</h2>
+    <p>2 Followers = 1 Stray Cat Fed | Only ৳20 per feeding</p>
+    <button class="btn btn-primary" onclick="donate()">Donate Now</button>
+    <button class="btn btn-secondary" onclick="viewVisitors()">View Visitors</button><div class="stats-box" id="visitorBox">
+    <h3>Website Visitor Stats</h3>
+    <p>Active Users: <strong id="activeUsers"></strong></p>
+    <p>Offline Users: <strong id="offlineUsers"></strong></p>
+    <p>Total Visitors Today: <strong id="totalVisitors"></strong></p>
+</div>
+
+</section><section class="section" id="about">
+    <h2>About PawHelp BD</h2>
+    <p>PawHelp BD is a community-driven initiative dedicated to feeding and caring for stray cats across Bangladesh. Every follow and every donation helps provide meals and hope to hungry street animals.</p>
+</section><section class="section" id="mission">
+    <h2>Our Mission</h2>
+    <div class="card-container">
+        <div class="card">
+            <h3>Feed Stray Cats</h3>
+            <p>Provide nutritious meals to street cats for just ৳20 per feeding.</p>
+        </div>
+        <div class="card">
+            <h3>Build Awareness</h3>
+            <p>Encourage compassion and responsibility towards stray animals.</p>
+        </div>
+        <div class="card">
+            <h3>Grow Community</h3>
+            <p>Engage followers on Instagram and YouTube to make a bigger impact.</p>
+        </div>
+    </div>
+</section><section class="section" id="contact">
+    <h2>Connect With Us</h2>
+    <p>Instagram: @PawHelp BD</p>
+    <p>YouTube: PawHelp BD</p>
+</section><footer>
+    <p>© 2026 PawHelp BD | Follow. Support. Make a Difference.</p>
+</footer><script>
+    function donate() {
+        alert("bKash number is currently unavailable. Please come back later.");
+    }
+
+    function viewVisitors() {
+        document.getElementById("visitorBox").style.display = "block";
+        
+        let active = Math.floor(Math.random() * 20) + 1;
+        let offline = Math.floor(Math.random() * 50) + 20;
+        let total = active + offline;
+
+        document.getElementById("activeUsers").innerText = active;
+        document.getElementById("offlineUsers").innerText = offline;
+        document.getElementById("totalVisitors").innerText = total;
+    }
+</script></body>
+</html>
